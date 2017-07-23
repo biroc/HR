@@ -1,0 +1,13 @@
+size = int(input())
+numbers = list(map(float, input().split()))
+weights = list(map(float, input().split()))
+
+sum_weights = 0
+sum_weighted_numbers = 0
+
+for i in range(0,size):
+    sum_weighted_numbers += weights[i] * numbers[i]      
+    sum_weights += weights[i]
+
+weighted_mean = sum_weighted_numbers / sum_weights
+print(round(weighted_mean,1))
